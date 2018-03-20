@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Buyer And Seller</title>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+	/* font-family: 'Jeju Gothic', serif; */
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: #c9d6de;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	/* 첫번째 줄  */
+	#inner {
+		height: 26px;
+		background-color: #52616a;
+		padding: 0 90px;
+	}
+	#head_inner {
+	 	max-width: 1200px;
+	 	margin: 0 auto;
+	}
+	#link {
+		width: 120px;
+		display: inline-block;
+	}
+	#link > a {
+		color: #FFFFFF;
+		text-decoration: none;
+		font-weight: bold;
+		line-height: 26px;
+	}
+	
+	#member {
+		list-style-type: none;
+		float: right;
+		
+	}
+	#member li{
+		float: left;
+		color : #FFFFFF;
+		font-size: 13px;
+		line-height: 26px;
+	}
+	#member li a {
+		color : #FFFFFF;
+		text-decoration: none;
+		padding: 0px 10px;
+		font-weight: bold;
+		height: 26px;
+		display: inline-block;
+	}
+	#member li a:hover {
+		background-color: #1e2022;
+		text-decoration: underline;
+	}
+	#li_drop {
+		position: relative;
+	}
+	#dropdown {
+		width: 98px;	
+		position: absolute;
+		left: -3px;	
+		display: none;
+	}
+	
+	#dropdown ul li {
+		width: 104px;
+		background-color: #c9d6de;
+		list-style-type: none;		
+	}
+	#member:hover #dropdown {
+		display: block;
+	}
+
+	/* 두번째 줄 */
+	#topArea {
+		height: 250px;
+	}
+	#logo {
+		width: 1200px;
+		height: 250px;
+		max-width: 1200px;
+		margin: 0 auto;
+		display: block;
+	}
+	
+	/* 세번째 줄 */
+	
+	#category {
+	   height: 45px;
+	   background-color: #52616a;
+	}
+	#head_category {
+	 	max-width: 1200px;
+	 	margin: 0 auto;
+	}
+	#category ul li {
+		float: left;
+		list-style-type: none;
+		height: 45px;
+	}
+    #category ul li > a {
+		color : #FFFFFF;
+		text-decoration: none;
+		padding: 0px 30px;
+		font-weight: bold;
+		line-height: 45px;
+		height: 45px;
+		display: block;
+		left: -10px;	
+	}
+	#category ul li:hover .category_li {
+		height: 40px;
+	}
+	#category li:hover {
+		background-color: #1e2022;
+		list-style-type: none;
+		border-top: 5px solid grey;
+    }
+    
+    #category ul li:hover .category_drop{
+    	display: block;
+    	
+    }
+    .category_drop {
+		display: none;
+	}
+  
+   .category_drop a {
+		display: block;
+		text-decoration: none;
+		color: #1e2022;
+		font-family: 'Jeju Gothic', serif;;
+		padding: 7px 0px;
+		font-size: 15px;
+		text-align: center;
+		line-height: 30px;
+		background-color: white;
+	}
+	.category_drop a:hover {
+		background-color: #52616a;
+		color: #f0f5f9;
+	}
+	
+	
+	
+</style>
+</head>
+<body>
+	<div id="inner">
+		<div id="head_inner">
+			<div id="link">
+				<a href="#">BUYKorea+</a>
+			</div>
+			<ul id="member">
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">회원가입</a></li>
+				<li id="li_drop">
+				<a href="#">마이페이지▼</a>
+				<div id="dropdown">
+					<ul>
+						<li><a href="#">주문/배송조회</a></li>
+						<li><a href="#">장바구니</a></li>
+						<li><a href="#">위시리스트</a></li>
+						<li><a href="#">쿠폰조회</a></li>
+					</ul>
+				</div>
+				</li>
+				<li><a href="#">행복고객센터</a></li>
+			</ul>
+			</div>
+			</div>
+	<div id="topArea">
+	<tr>
+		<td align="center">
+		<img src="image/map.png" id="logo">
+		</td>
+	</tr>
+	</div>
+	
+	
+	<div id="category">
+		<div id="head_category">
+		<ul>
+			<li><a href="#" class="category_li">주요10대교역국</a>
+				<div class="category_drop">
+				<a href="#">1.중국</a>
+				<a href="#">2.미국</a>
+				<a href="#">3.독일</a>
+				<a href="#">4.일본</a>
+				<a href="#">5.네덜란드</a>
+				<a href="#">6.홍콩</a>
+				<a href="#">7.프랑스</a>
+				<a href="#">8.한국</a>
+				<a href="#">9.이탈리아</a>
+				<a href="#">10.영국</a>
+				</div>
+			</li>
+			<li><a href="#" class="category_li">아시아</a>
+				<div class="category_drop">
+				<a href="#">1.중국</a>
+				<a href="#">2.베트남</a>
+				<a href="#">3.홍콩</a>
+				<a href="#">4.일본</a>
+				<a href="#">5.호주</a>
+				<a href="#">6.인도</a>
+				<a href="#">7.대만</a>
+				<a href="#">8.싱가포르</a>
+				<a href="#">9.말레이시아</a>
+				<a href="#">10.태국</a>
+				</div>
+			</li>
+			<li><a href="#" class="category_li">북아메리카</a>
+				<div class="category_drop">
+				<a href="#">1.미국</a>
+				<a href="#">2.멕시코</a>
+				<a href="#">3.바하마</a>
+				<a href="#">4.과테말라</a>
+				</div>
+			</li>
+			<li><a href="#" class="category_li">유럽</a>
+				<div class="category_drop">
+				<a href="#">1.독일</a>
+				<a href="#">2.프랑스</a>
+				<a href="#">3.영국</a>
+				<a href="#">4.이탈리아</a>
+				<a href="#">5.네덜란드</a>
+				<a href="#">6.그리스</a>
+				<a href="#">7.덴마크</a>
+				<a href="#">8.루마니아</a>
+				<a href="#">9.벨기에</a>
+				<a href="#">10.체코</a>
+				<a href="#">11.스페인</a>
+				<a href="#">12.헝가리</a>
+				</div>
+			</li>
+			<li><a href="#" class="category_li">중동</a>
+				<div class="category_drop">
+				<a href="#">1.레바논</a>
+				<a href="#">2.바레인</a>
+				<a href="#">3.사우디</a>
+				<a href="#">4.이라크</a>
+				<a href="#">5.이란</a>
+				<a href="#">6.터키</a>
+				<a href="#">7.쿠웨이트</a>
+				<a href="#">8.이스라엘</a>
+				<a href="#">9.아랍에미리트</a>
+				<a href="#">10.시리아</a>
+				</div>
+			</li>
+			<li><a href="#" class="category_li">남아메리카</a>
+				<div class="category_drop">
+				<a href="#">1.브라질</a>
+				<a href="#">2.아르헨티나</a>
+				<a href="#">3.베네수엘라</a>
+				<a href="#">4.에콰도르</a>
+				<a href="#">5.칠레</a>
+				<a href="#">6.콜롬비아</a>
+				<a href="#">7.우루과이</a>
+				<a href="#">8.볼리비아</a>
+				<a href="#">9.파라과이</a>
+				<a href="#">10.페루</a>
+				</div>
+			</li>
+			<li><a href="#" class="category_li">아프리카</a>
+				<div class="category_drop">
+				<a href="#">1.이집트</a>
+				<a href="#">2.콩고민주공화국</a>
+				<a href="#">3.남아프리카공화국</a>
+				<a href="#">4.나이지리아</a>
+				<a href="#">5.수단</a>
+				<a href="#">6.리비아</a>
+				<a href="#">7.알제리</a>
+				<a href="#">8.세네갈</a>
+				<a href="#">9.케냐</a>
+				<a href="#">10.모르코</a>
+				</div>
+			</li>
+			<li><a href="#" class="category_li">오세아니아</a>
+				<div class="category_drop">
+				<a href="#">1.호주</a>
+				<a href="#">2.뉴질랜드</a>
+				<a href="#">3.인도네시아</a>
+				<a href="#">4.사모아</a>
+				</div>
+			</li>
+			<li><a href="#" class="category_li">ASEAN무역</a>
+				<div class="category_drop">
+				<a href="#">1.베트남</a>
+				<a href="#">2.싱가포르</a>
+				<a href="#">3.말레이시아</a>
+				<a href="#">4.필리핀</a>
+				<a href="#">5.인도네시아</a>
+				<a href="#">6.태국</a>
+				<a href="#">7.캄보디아</a>
+				<a href="#">8.라오스</a>
+				<a href="#">9.브루나이</a>
+				<a href="#">10.미얀마</a>
+				</div>
+			</li>
+		</ul>
+	    </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Buyer And Seller</title>
+<!-- 브라우저 타이틀바 로고 삽입(파이콘:favicon) -->
+<link rel="icon" type="image/png" href="image/alllogo.PNG">
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+	/* font-family: 'Jeju Gothic', serif; */
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: #c9d6de;
+		min-width: 1080px;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	#header {
+		width: 100%;
+		position: relative;
+		padding-bottom: 42px;
+		clear: both;
+	}
+	/* 첫번째 줄  */
+	#inner1 {
+		height: 26px;
+		background-color: #52616a;
+		box-sizing: border-box;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+					0 6px 20px 0 rgba(0,0,0,0.19);
+		padding: 0 90px;
+	}
+     .inner {
+		padding: 0 90px; 
+	} 
+	.head_inner {
+	 	max-width: 1200px;
+	 	margin: 0 auto;
+	}
+	#link {
+		width: 120px;
+		display: inline-block;
+	}
+	#link > a {
+		color: #FFFFFF;
+		text-decoration: none;
+		font-weight: bold;
+		line-height: 26px;
+	}
+	
+	#member {
+		list-style-type: none;
+		float: right;
+		
+	}
+	#member li{
+		float: left;
+		color : #FFFFFF;
+		font-size: 13px;
+		line-height: 26px;
+	}
+	#member li a {
+		color : #FFFFFF;
+		text-decoration: none;
+		padding: 0px 10px;
+		font-weight: bold;
+		height: 26px;
+		display: inline-block;
+	}
+	#member > li:hover {
+		background-color: #1e2022;
+		text-decoration: underline;
+	}
+	#li_drop {
+		position: relative;
+	}
+	#dropdown {
+		width: 98px;	
+		position: absolute;
+		left: -3px;	
+		display: none;
+	}
+	
+	#dropdown ul li {
+		width: 104px;
+		background-color: #c9d6de;
+		list-style-type: none;		
+	}
+	#member > li:hover #dropdown {
+		display: block;
+	}
+
+	/* 두번째 줄 */
+	#topArea {
+		height: 250px;
+		background-image: url(image/map.png);
+	}
+	#logo {
+		width: 1200px;
+		height: 250px;
+		max-width: 1200px;
+		margin: 0 auto;
+		display: block;
+	}
+	#line2_search {
+		height: 34px;
+		display: inline-block;
+		float: right;
+		line-height: 30px;
+		position: absolute;
+		right: 280px;
+		top: 230px;
+	}
+	#line2_wrap {
+		height: 34px;
+		border : 2px solid #282C37;
+		box-sizing: border-box;
+	}
+	input#search_keyword {
+		width: 350px;
+		height: 50px;
+		font-size: 13px;
+		box-sizing: border-box;
+		display: block;
+		float: left;
+		border: 0px;
+		padding-left: 5px;
+	}
+	input#search_btn hover {
+		width: 55px;
+		height: 30px;
+		float: right;
+		background-color: #282C37;
+		color: white;
+		display: block;
+		border: 0px;
+		padding-right: 5px;
+	}
+	
+	/* 세번째 줄 */
+	
+	#category {
+	   height: 45px;
+	   background-color: #52616a;
+	   padding: 0 90px 0 70px;
+	   box-sizing: border-box;
+	   width: 100%;
+	   margin: 0 auto;
+	   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+					0 6px 20px 0 rgba(0,0,0,0.19);
+	   position: absolute;
+	}
+	#head_inner {
+	 	max-width: 1200px;
+	 	
+	}
+	.line3_li {
+		position: relative;
+		float: left;
+		list-style-type: none;
+		height: 45px;
+	}
+    .line3_li > a {
+		color : #FFFFFF;
+		text-decoration: none;
+		padding: 0px 30px;
+		font-weight: bold;
+		line-height: 45px;
+		height: 45px;
+		display: block;
+		left: -10px;	
+	}
+	.line3_li:hover .category_li {
+		height: 40px;
+	}
+	#category li:hover {
+		background-color: #1e2022;
+		list-style-type: none;
+		border-top: 5px solid grey;
+    }
+    
+    .line3_li:hover .category_drop{
+    	display: block;
+    	
+    }
+    .category_drop {
+    	position: absolute;
+    	z-index: 10;
+		display: none;
+		width: 100%;
+	}
+  
+   .category_drop a {
+		display: block;
+		text-decoration: none;
+		color: #1e2022;
+		font-family: 'Jeju Gothic', serif;;
+		padding: 7px 0px;
+		font-size: 15px;
+		text-align: center;
+		line-height: 30px;
+		background-color: white;
+	}
+	.category_drop a:hover {
+		background-color: #52616a;
+		color: #f0f5f9;
+	}
+	
+	/* 4번째줄 */
+	#picture {
+	    width: 100%;
+		position: relative;
+		padding: 0 90px 0 70px;
+		padding-bottom: 42px;
+		clear: both;
+		left: -40px;
+		top: 70px;
+		}
+	div.gallery {
+		margin: 5px;
+		border: 1px solid #ccc;
+		float: left;
+		width: 180px;
+	}
+	div.gallery img {
+		width: 100%;
+		/* height: auto; */
+	}
+	div.gallery:hover {
+		border: 1px solid #777;
+	}
+	div.desc {
+		padding: 15px;
+		text-align: center;
+	}
+	div.dropdown {
+		clear: both;
+		padding-top: 50px;
+		position: relative;
+	}
+	.dropdown:hover .dropdown-content {
+		display: block;
+	} 
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+	
+	
+	
+</style>
+</head>
+<body>
+	<div id="header">
+	<!-- 첫번째줄 시작, 로그인 회원가입 등등 -->
+		<div id="inner1" class="inner">
+		  <div class="head_inner">
+			<div id="link">
+				<a href="#">BUYKorea+</a>
+			</div>
+			<ul id="member">
+				<li><a href="login.html">로그인</a></li>
+				<li><a href="#">회원가입</a></li>
+				<li id="li_drop">
+				<a href="#">마이페이지▼</a>
+				<div id="dropdown">
+					<ul>
+						<li><a href="#">주문/배송조회</a></li>
+						<li><a href="#">장바구니</a></li>
+						<li><a href="#">위시리스트</a></li>
+						<li><a href="#">쿠폰조회</a></li>
+					</ul>
+				</div>
+				</li>
+				<li><a href="#">행복고객센터</a></li>
+			</ul>
+			</div>
+		</div>
+		<!-- 두번째 줄 시작,   -->
+	<div id="topArea" class="inner">
+		<div class="head_inner">
+		<!-- <img src="image/map.png" id="logo"> -->
+			<div id="line2_search">
+				<div id="line2_wrap">
+					<input id="search keyword" name="search_keyword" type="text" placeholder="검색어를 입력해주세요.">
+					<input id="search_btn" type="submit" value="검색">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 세번째줄 시작 -->
+	<div id="category" class="inner">
+		<div class="head_inner">
+		<ul>
+			<li class="line3_li"><a href="#" class="category_li">주요10대교역국</a>
+				<div class="category_drop">
+				<a href="image_gallery.html" target="_blank">1.중국</a>
+				<a href="#">2.미국</a>
+				<a href="#">3.독일</a>
+				<a href="#">4.일본</a>
+				<a href="#">5.네덜란드</a>
+				<a href="#">6.홍콩</a>
+				<a href="#">7.프랑스</a>
+				<a href="#">8.한국</a>
+				<a href="#">9.이탈리아</a>
+				<a href="#">10.영국</a>
+				</div>
+			</li>
+			<li class="line3_li"><a href="#" class="category_li">아시아</a>
+				<div class="category_drop">
+				<a href="#">1.중국</a>
+				<a href="#">2.베트남</a>
+				<a href="#">3.홍콩</a>
+				<a href="#">4.일본</a>
+				<a href="#">5.호주</a>
+				<a href="#">6.인도</a>
+				<a href="#">7.대만</a>
+				<a href="#">8.싱가포르</a>
+				<a href="#">9.말레이시아</a>
+				<a href="#">10.태국</a>
+				</div>
+			</li>
+			<li class="line3_li"><a href="#" class="category_li">북아메리카</a>
+				<div class="category_drop">
+				<a href="#">1.미국</a>
+				<a href="#">2.멕시코</a>
+				<a href="#">3.바하마</a>
+				<a href="#">4.과테말라</a>
+				</div>
+			</li>
+			<li class="line3_li"><a href="#" class="category_li">유럽</a>
+				<div class="category_drop">
+				<a href="#">1.독일</a>
+				<a href="#">2.프랑스</a>
+				<a href="#">3.영국</a>
+				<a href="#">4.이탈리아</a>
+				<a href="#">5.네덜란드</a>
+				<a href="#">6.그리스</a>
+				<a href="#">7.덴마크</a>
+				<a href="#">8.루마니아</a>
+				<a href="#">9.벨기에</a>
+				<a href="#">10.체코</a>
+				<a href="#">11.스페인</a>
+				<a href="#">12.헝가리</a>
+				</div>
+			</li>
+			<li class="line3_li"><a href="#" class="category_li">중동</a>
+				<div class="category_drop">
+				<a href="#">1.레바논</a>
+				<a href="#">2.바레인</a>
+				<a href="#">3.사우디</a>
+				<a href="#">4.이라크</a>
+				<a href="#">5.이란</a>
+				<a href="#">6.터키</a>
+				<a href="#">7.쿠웨이트</a>
+				<a href="#">8.이스라엘</a>
+				<a href="#">9.아랍에미리트</a>
+				<a href="#">10.시리아</a>
+				</div>
+			</li>
+			<li class="line3_li"><a href="#" class="category_li">남아메리카</a>
+				<div class="category_drop">
+				<a href="#">1.브라질</a>
+				<a href="#">2.아르헨티나</a>
+				<a href="#">3.베네수엘라</a>
+				<a href="#">4.에콰도르</a>
+				<a href="#">5.칠레</a>
+				<a href="#">6.콜롬비아</a>
+				<a href="#">7.우루과이</a>
+				<a href="#">8.볼리비아</a>
+				<a href="#">9.파라과이</a>
+				<a href="#">10.페루</a>
+				</div>
+			</li>
+			<li class="line3_li"><a href="#" class="category_li">아프리카</a>
+				<div class="category_drop">
+				<a href="#">1.이집트</a>
+				<a href="#">2.콩고민주공화국</a>
+				<a href="#">3.남아프리카공화국</a>
+				<a href="#">4.나이지리아</a>
+				<a href="#">5.수단</a>
+				<a href="#">6.리비아</a>
+				<a href="#">7.알제리</a>
+				<a href="#">8.세네갈</a>
+				<a href="#">9.케냐</a>
+				<a href="#">10.모르코</a>
+				</div>
+			</li>
+			<li class="line3_li"><a href="#" class="category_li">오세아니아</a>
+				<div class="category_drop">
+				<a href="#">1.호주</a>
+				<a href="#">2.뉴질랜드</a>
+				<a href="#">3.인도네시아</a>
+				<a href="#">4.사모아</a>
+				</div>
+			</li>
+			<li class="line3_li"><a href="#" class="category_li">ASEAN무역</a>
+				<div class="category_drop">
+				<a href="#">1.베트남</a>
+				<a href="#">2.싱가포르</a>
+				<a href="#">3.말레이시아</a>
+				<a href="#">4.필리핀</a>
+				<a href="#">5.인도네시아</a>
+				<a href="#">6.태국</a>
+				<a href="#">7.캄보디아</a>
+				<a href="#">8.라오스</a>
+				<a href="#">9.브루나이</a>
+				<a href="#">10.미얀마</a>
+				</div>
+			</li>
+		</ul>
+	   </div>
+	 </div>
+	<div id="picture" class="inner"> 
+	<div class="head_inner">
+	<div class="gallery">
+		<a href="image/gallery/car.png" target="_blank">
+		<img src="image/gallery/car.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">자동차 부품</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/electic.png" target="_blank">
+		<img src="image/gallery/electic.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">전자제품 및 부품</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/machine.png" target="_blank">
+		<img src="image/gallery/machine.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">기계 및 부품</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/snack.png" target="_blank">
+		<img src="image/gallery/snack.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">가공식품</div>
+	</div>
+	 
+	 <div class="gallery">
+		<a href="image/gallery/agri.png" target="_blank">
+		<img src="image/gallery/agri.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">농산물</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/wood.png" target="_blank">
+		<img src="image/gallery/wood.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">가구 및 목재</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/cosmetic.png" target="_blank">
+		<img src="image/gallery/cosmetic.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">화장품</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/ship.png" target="_blank">
+		<img src="image/gallery/ship.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">선박 부품</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/img_fjords.jpg" target="_blank">
+		<img src="image/gallery/img_fjords.jpg" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">소비재</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/img_forest.jpg" target="_blank">
+		<img src="image/gallery/img_forest.jpg" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">화학제품 공업품</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/medical.png" target="_blank">
+		<img src="image/gallery/medical.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">의료기기</div>
+	</div>
+	
+	<div class="gallery">
+		<a href="image/gallery/ion.png" target="_blank">
+		<img src="image/gallery/ion.png" alt="갤러리 이미지" width="200px" height="200px">
+		</a>
+		<div class="desc">철광제품</div>
+	</div>
+	</div>
+	
+	</div>
+</body>
+</html>

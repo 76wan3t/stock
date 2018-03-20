@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BLUEDOOR Join</title>
+<link rel="icon" type="image/png" href="image/alllogo.PNG">
+<style type="text/css">
+	body, ul, h1 {
+		margin: 0;
+		padding: 0;
+	}
+
+	ul {
+		list-style: none;
+	}
+	a:link, a:visited {
+		text-decoration: none;
+		color: inherit;
+	}
+	#wrap {
+		margin: 50px auto 0;
+		border: 3px solid gray;
+		width: 466px;
+		height: 700px;
+	}
+
+	#kakao_header {
+		height: 39px;
+		padding-top: 16px;
+		border-top: 4px solid ##0000FF;
+		border-bottom: 1px solid #d4d4d4;
+		overflow: hidden;
+	}
+
+	h1 {
+		float: left;
+		margin-left: 25px;
+	}
+
+	#kakao_logo {
+		font-size: 25px;
+		line-height: 20px;
+		text-align: center;
+		display: block;
+		position: relative;
+		left: 170px;
+	}
+
+	#kakao_logo>img {
+		width: 100px;
+		height: 40px;
+		float: left;
+		margin-right: 80px;
+		line-height: center;
+	}	
+	#kakao_content {
+		margin: 10px auto;
+		height: 500px;
+		text-align: center;
+	}
+	
+	#login_content {
+		width: 270px;
+		height: 500px;
+		padding: 0 25px;
+		border: 1px solid #ddd;
+		text-align: left;
+		display: inline-block;
+	}
+	
+	#login_area {
+		width: 270px;
+		height: 372px;
+		position: relative;
+	}
+	
+	#subtitle {
+		position: relative;
+		height: 18px;
+		margin: 22px auto 12px 0px;
+	}
+	
+	#subtitle>img {
+		width: 60px;
+		height: 18px;
+	}
+	
+	.idpw {
+		color: #333;
+		letter-spacing: -1px;
+		background-color: white;
+		width: 240px;
+		height: 22px;
+		border: 1px solid #e5e5e5;
+		border-radius: 5px;
+		font-weight: nomal;
+		font-size: 13px;
+		line-height: 22px;
+		padding: 8px 12px;
+		margin-bottom: 8px;
+		outline: none;
+	}
+	#login_form {
+		position: relative;
+	}
+	#login_form>img {
+		display: inline-block;;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 8px;
+		right: 8px;
+	}
+	#remember {
+		margin: -1px 0 16px;
+	}
+	#remember>input {
+		color: #333;
+		margin: 3px 3px 3px 4px;
+		vertical-align: middle;
+	}
+	#remember>label {
+		font-size: 13px;
+		letter-spacing: -1px;
+	}
+	#btn_login {
+		color : white;
+		font-weight: bold;
+		display: inline-block;
+		background-color: #5882FA;
+		border: 1px solid #0404B4;
+		width: 268px;
+		height: 35px;
+		padding-top: 5px;
+		line-height: 25px;
+		text-align: center;
+		border-radius: 5px;
+	}
+	#login_help {
+		width: 270px;
+		position: absolute;
+		bottom: 20px;
+		padding-top: 10px;
+		font-size: 12px;
+		letter-spacing: -1px;
+		border-top: 1px solid #cfcfcf;
+	}
+	#login_help a {
+		letter-spacing: -1px;
+		color: #333;
+	}
+	#login_help a:hover {
+		text-decoration: underline;
+	}
+	.right {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+	}
+	.right>a {
+		color: #777 !important;
+	}
+	.right_bar {
+		display: inline-block;
+		width: 1px;
+		height: 11px;
+		background-color: #ccc;
+		font-size: 11px;
+		margin: 4px 1px 0 3px;
+	}
+	#kakao_footer {
+		padding: 19px 30px 22px;
+		border-top: 1px solid #d4d4d4;
+		font-size: 12px;
+		text-align: center;
+		letter-spacing: -1px;
+	}
+	#kakao_footer .link_info {
+		display: inline-block;
+		line-height: 22px;
+		color: #898989;
+	}
+	#kakao_footer .link_info:hover {
+		text-decoration: underline;
+	}
+	#footer_link .text_bar {
+		display: inline-block;
+		width: 1px;
+		height: 8px;
+		margin: 4px 1px 0 3px;
+		font-size: 11px;
+		background-color: #ccc;
+	}
+	.util_cont {
+		position: relative;
+		display: inline-block;
+		font-size: 12px;
+		text-align: center;
+		letter-spacing: -1px;
+	}
+	.btn_info {
+		display: inline-block;
+		padding: 0;
+		margin-top: -2px;
+		font-size: 12px;
+		line-height: 22px;
+		color : #898989;
+		vertical-align: top;
+		border: 0 none;
+		background-color: transparent;
+		cursor: pointer;
+	}
+	#btn_semo {
+		display: inline-block;
+		font-size: 1px;
+		position: absolute;
+		top: 0px;
+		right: -10px;
+	}
+	#footer_info {
+		margin-top: 5px;
+	}
+	.txt_copyright {
+		font-size: 12px;
+		color: #919191;
+	}
+	.link_kakao:hover {
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="kakao_header">
+			<h1>
+				<a id="kakao_logo" href="#">
+					Join Us
+				</a>
+			</h1>
+		</div>
+		<div id="kakao_content">
+			<div id="login_content">
+				<div id="login_area">
+					<div id="subtitle">
+					</div>
+					<div id="container">
+						<form method="post" id="login_form">
+							
+							<input class="idpw" type="text" id="login_id" placeholder="아이디"></input> 
+							<input class="idpw" type="password" id="login_pw" placeholder="비밀번호(4~16자리)"></input>
+							<input class="idpw" type="password" id="login_pw" placeholder="비밀번호 확인"></input>
+							<input class="idpw" type="text" id="login_ad" placeholder=" 이메일주소"></input> 
+							<input class="idpw" type="text" id="login_hp" placeholder="핸드폰번호"></input>
+							<input type="text" id="sample6_postcode" placeholder="우편번호">
+							<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+							<input type="text" id="sample6_address" placeholder="주소">
+							<input type="text" id="sample6_address2" placeholder="상세주소">
+
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script>
+    function sample6_execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var fullAddr = ''; // 최종 주소 변수
+                var extraAddr = ''; // 조합형 주소 변수
+
+                // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    fullAddr = data.roadAddress;
+
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    fullAddr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+                if(data.userSelectedType === 'R'){
+                    //법정동명이 있을 경우 추가한다.
+                    if(data.bname !== ''){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있을 경우 추가한다.
+                    if(data.buildingName !== ''){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                    fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('sample6_postcode').value = data.zonecode; //5자리 새우편번호 사용
+                document.getElementById('sample6_address').value = fullAddr;
+
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById('sample6_address2').focus();
+            }
+        }).open();
+    }
+</script>
+							
+						</form>
+						<div id="remember">
+							<input type="checkbox" name="remember" id="remember2"> 
+							<label for="remember2">아이디 저장</label>
+						</div>
+						<a href="#" id="btn_login">회원가입 
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="kakao_footer">
+			<div id="footer_link">
+				<a href="#" class="link_info">공지사항</a>
+				<span class="text_bar"></span>
+				<a href="#" class="link_info">이용약관</a>
+				<span class="text_bar"></span>
+				<a href="#" class="link_info">개인정보 처리방침</a>
+				<span class="text_bar"></span>
+				<a href="#" class="link_info">운영정책</a>
+				<span class="text_bar"></span>
+				<span class="util_cont">
+					<button type="button" class="btn_info">한국어</button>
+					<span id="btn_semo">▼</span>
+				</span>
+			</div>
+			<div id="footer_info">
+				<small class="txt_copyright">
+					Copyright ⓒ
+					<a href="#" class="link_kakao">BLUEDOOR Corp.</a>
+					All rights reserved.
+				</small>			
+			</div>
+		</div>
+	</div>
+</body>
+</html>
